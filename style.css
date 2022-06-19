@@ -13,7 +13,7 @@ body{
 
 .container{
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;  
     flex-direction: column;
     height: 100%;
@@ -24,7 +24,7 @@ header{
     font-size: 3rem;
     font-weight: bold;
     color: #3A3845;
-    flex: 1;
+    /* flex: 1; */
 }
 .sub-container{
     display: flex;
