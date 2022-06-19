@@ -82,8 +82,14 @@ input[name="size"]{
     font-family: 'Times New Roman', Times, serif';
 }
 
-input[value="Submit"]{
+input[value="Grid Size"]{
     border: none;
     padding: 10px;
-    border-radius: 2px;
+    border-radius: 5px;
+}
+
+input[value="Grid Size"]:hover{
+    background-color: #3A3845;
+    color: white;
+    font-weight: bold;
 }
