@@ -1,6 +1,7 @@
 
 function createGrid(numOfSq){
 
+    // console.log(numOfSq)
     let numOfBoxes = numOfSq;
     const gridLen = 500; //500 x 500
 
@@ -43,10 +44,16 @@ function changeColor(e){
 }
 
 function getSize(){
-    let size = document.querySelector('input[name="size"]');
     let submit = document.querySelector('input[type="button"]');
+    submit.addEventListener('click', () => createGrid(limitCheck(Number(document.querySelector('input[name="size"]').value))));
+}
 
-    submit.addEventListener('click', () => createGrid(Number(size.value)));
+function limitCheck(size){
+    console.log(size);
+    if( !(size >= 6 && size <= 100)) 
+        return 6;  
+    else  
+        return size;
 }
 
 let clearButton = document.querySelector(".btn-clear");
