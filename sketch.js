@@ -45,7 +45,12 @@ function changeColor(e){
 
 function getSize(){
     let submit = document.querySelector('input[type="button"]');
+    defaultGrid();
     submit.addEventListener('click', () => createGrid(limitCheck(Number(document.querySelector('input[name="size"]').value))));
+}
+
+function defaultGrid(){
+    createGrid(6);
 }
 
 function limitCheck(size){
@@ -55,6 +60,7 @@ function limitCheck(size){
     else  
         return size;
 }
+
 
 let clearButton = document.querySelector(".btn-clear");
 clearButton.addEventListener('click', () => createGrid(6));
